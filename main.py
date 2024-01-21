@@ -64,13 +64,11 @@ if uploaded_file is not None:
 
     st.image(img)
 
-
-
+    tags_name = get_tags(img_path)
+    tags_name = ', '.join(tags_name)
 
     st.markdown('認識されたコンテンツタグ')
-    
-    tags = get_tags(img_path)
-    st.markdown(tags)
+    st.markdown(f'>{tags_name}')
 
 
 
